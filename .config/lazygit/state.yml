@@ -1,0 +1,16 @@
+lastupdatecheck: 0
+recentrepos:
+- /home/hwang/dotfiles
+- /home/hwang/.config/nvim
+- /home/hwang/work/inventory
+- /home/hwang/work/timesheet-bruinlife
+- /home/hwang/work/aoc2023
+- /home/hwang/work/Fa23/cs118/CS118-F23-Project-2
+- /mnt/c/Users/hwang/Desktop/UCLA/Fa23/LA/run-single-file/fall-23-autograder
+- /mnt/c/Users/hwang/Desktop/UCLA/Fa23/LA/fall-23-autograder
+- /mnt/c/Users/hwang/Desktop/UCLA/Fa23/CS-118/cs-118-proj-1
+startuppopupversion: 5
+customcommandshistory:
+- set number?
+hidecommandlog: true
+ignorewhitespaceindiffview: false
