@@ -39,7 +39,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 # <<< NVM Setup End <<<
 
-export PATH=$PATH:/usr/local/go/bin:/home/hwang/scripts:/home/hwang/.docker/cli-plugins/
+export PATH=$PATH:/usr/local/go/bin:/home/hwang/.scripts:/home/hwang/.docker/cli-plugins/
 eval "$(zoxide init zsh)"
 
 source ~/.powerlevel10k/powerlevel10k.zsh-theme
