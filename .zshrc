@@ -64,8 +64,9 @@ alias cpd='z -'
 alias ed='z' # i suck, i know
 alias lg='lazygit'
 
-bindkey -s ^t "tmux-sessionizer\n"
-bindkey -s ^f "__zoxide_zi\n"
+bindkey -s ^t "tmux-sessionizer $(pwd)\n"
+bindkey -s '^[t' "tmux-sessionizer\n"
+bindkey -s ^f "\n__zoxide_zi\n"
 bindkey '^ ' autosuggest-accept
 
 # case insensitive completion

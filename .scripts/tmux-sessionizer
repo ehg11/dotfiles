@@ -1,6 +1,10 @@
 #!/bin/bash
 
-selected=$(find ~/work -mindepth 1 -maxdepth 2 -type d | fzf)
+if [ -z "$1" ]; then
+    selected=$(find ~/work -mindepth 1 -maxdepth 2 -type d | fzf)
+else 
+    selected="$1"
+fi
 
 if [[ -z $selected ]]; then
     exit 0
@@ -8,6 +12,12 @@ fi
 
 selected_name=$(basename "$selected")
 tmux_running=$(pgrep tmux)
+
+if [[ $selected_name == .* ]]; then
+    selected_name="${selected_name#.}"
+fi
+
+echo "$selected_name"
 
 if [[ -z $TMUX ]] && [[ -z $tmux_running ]]; then
     tmux new-session -s $selected_name -c $selected
@@ -22,3 +32,4 @@ if [[ -z $TMUX ]]; then
 else 
     tmux switch-client -t $selected_name
 fi
+
