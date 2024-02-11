@@ -17,8 +17,6 @@ if [[ $selected_name == .* ]]; then
     selected_name="${selected_name#.}"
 fi
 
-echo "$selected_name"
-
 if [[ -z $TMUX ]] && [[ -z $tmux_running ]]; then
     tmux new-session -s $selected_name -c $selected
 fi
