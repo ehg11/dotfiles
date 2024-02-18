@@ -63,6 +63,7 @@ alias cd='z'
 alias cpd='z -'
 alias ed='z' # i suck, i know
 alias lg='lazygit'
+alias nv='nvim'
 
 bindkey -s '^t' "\nTMUXDIR=\$(pwd) && tmux-sessionizer \$TMUXDIR\n"
 bindkey -s '^[t' "\ntmux-sessionizer\n"
