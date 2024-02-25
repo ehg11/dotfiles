@@ -68,7 +68,7 @@ alias nv='nvim'
 bindkey -s '^t' "\nTMUXDIR=\$(pwd) && tmux-sessionizer \$TMUXDIR\n"
 bindkey -s '^[t' "\ntmux-sessionizer\n"
 bindkey -s '^f' "\n__zoxide_zi\n"
-bindkey '^ ' autosuggest-accept
+bindkey '^e' autosuggest-accept
 
 # case insensitive completion
 autoload -Uz compinit && compinit
@@ -80,3 +80,5 @@ zle -N history-beginning-search-backward-end history-search-end
 zle -N history-beginning-search-forward-end history-search-end
 bindkey "^[OA" history-beginning-search-backward-end
 bindkey "^[OB" history-beginning-search-forward-end
+
+export TERM=xterm-256color
