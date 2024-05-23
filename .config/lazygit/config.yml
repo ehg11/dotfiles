@@ -2,19 +2,19 @@ gui:
   nerdFontsVersion: "3"
 keybinding:
   universal:
-    quit: q
+    quit: <C-q>
     quit-alt1: <c-c>
-    return: <C-q>
+    return: q
     quitWithoutChangingDirectory: Q
     togglePanel: <tab>
     prevItem: <up>
     nextItem: <down>
     prevItem-alt: k
     nextItem-alt: j
-    prevPage: ','
+    prevPage: ","
     nextPage: .
     gotoTop: <
-    gotoBottom: '>'
+    gotoBottom: ">"
     scrollLeft: H
     scrollRight: L
     prevBlock: <left>
@@ -23,7 +23,7 @@ keybinding:
     nextBlock-alt: l
     nextMatch: n
     prevMatch: N
-    optionMenu-alt1: '?'
+    optionMenu-alt1: "?"
     select: <space>
     goInto: <enter>
     openRecentRepos: <c-r>
@@ -38,24 +38,24 @@ keybinding:
     scrollDownMain-alt1: J
     scrollUpMain-alt2: <c-u>
     scrollDownMain-alt2: <c-d>
-    executeCustomCommand: ':'
+    executeCustomCommand: ":"
     createRebaseOptionsMenu: m
     pushFiles: P
     pullFiles: p
     refresh: R
     createPatchOptionsMenu: <c-p>
-    nextTab: ']'
-    prevTab: '['
-    nextScreenMode: '+'
-    prevScreenMode: '_'
-    undo: 'z'
+    nextTab: "]"
+    prevTab: "["
+    nextScreenMode: "+"
+    prevScreenMode: "_"
+    undo: "z"
     redo: <c-z>
     filteringMenu: <c-s>
-    diffingMenu: 'W'
+    diffingMenu: "W"
     diffingMenu-alt: <c-e>
     copyToClipboard: <c-o>
     submitEditorText: <enter>
-    extrasMenu: '@'
+    extrasMenu: "@"
     toggleWhitespaceInDiffView: <c-w>
-    increaseContextInDiffView: '}'
-    decreaseContextInDiffView: '{'
+    increaseContextInDiffView: "}"
+    decreaseContextInDiffView: "{"
