@@ -51,10 +51,10 @@ source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 alias ls='exa'
 alias ll='exa -alh'
 alias grep='grep --color=auto'
-alias ls='exa'
-alias ll='exa -lh'
-alias la='exa -alh'
-alias l.='exa -ld .*'
+alias ls='exa --color=always --icons --sort=Ext --group-directories-first'
+alias ll='exa --color=always --icons --sort=Ext --group-directories-first --long'
+alias la='exa --color=always --icons --sort=Ext --group-directories-first --long --all'
+alias l.='exa --color=always --icons --sort=Ext --group-directories-first --long --list-dirs .*'
 alias python='python3'
 alias cdhome='z /mnt/c/Users/hwang'
 alias cducla='z /mnt/c/Users/hwang/Desktop/UCLA/Sp24/'
@@ -64,6 +64,7 @@ alias cpd='z -'
 alias ed='z' # i suck, i know
 alias lg='lazygit'
 alias nv='nvim'
+alias explorer='/mnt/c/Windows/explorer.exe'
 
 bindkey -s '^t' "\nTMUXDIR=\$(pwd) && tmux-sessionizer \$TMUXDIR\n"
 bindkey -s '^[t' "\ntmux-sessionizer\n"
@@ -90,3 +91,8 @@ if [ -f '/home/hwang/google-cloud-sdk/path.zsh.inc' ]; then . '/home/hwang/googl
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/home/hwang/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/hwang/google-cloud-sdk/completion.zsh.inc'; fi
+
+eval $(thefuck --alias fuck)
+
+# easier path to windows home
+export WINHOME=/mnt/c/Users/hwang/
