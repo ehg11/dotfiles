@@ -96,3 +96,4 @@ eval $(thefuck --alias fuck)
 
 # easier path to windows home
 export WINHOME=/mnt/c/Users/hwang/
+export PATH="/mnt/c/Program Files/:$PATH"
