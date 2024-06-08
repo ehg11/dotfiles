@@ -22,7 +22,7 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
     powerline_symbol = ''
     background = 'p:blue'
     foreground = '#FFFFFF'
-    template = ' {{ .Path }} '
+    template = '  {{ .Path }}'
 
     [blocks.segments.properties]
       style = 'powerlevel'
