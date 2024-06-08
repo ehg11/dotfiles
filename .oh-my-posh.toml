@@ -1,0 +1,141 @@
+version = 2
+final_space = true
+console_title_template = '{{ .Shell }} in {{ .Folder }}'
+
+[[blocks]]
+  type = 'prompt'
+  alignment = 'left'
+
+  [[blocks.segments]]
+    type = 'root'
+    style = 'powerline'
+    leading_powerline_symbol = ''
+    powerline_symbol = ''
+    background = 'p:red'
+    foreground = '#FFFFFF'
+    template = "  "
+
+  [[blocks.segments]]
+    type = 'path'
+    style = 'powerline'
+    leading_powerline_symbol = ''
+    powerline_symbol = ''
+    background = 'p:blue'
+    foreground = '#FFFFFF'
+    template = ' {{ .Path }} '
+
+    [blocks.segments.properties]
+      style = 'powerlevel'
+      max_width = 20
+
+  [[blocks.segments]]
+    type = 'git'
+    style = 'powerline'
+    leading_powerline_symbol = ''
+    powerline_symbol = ''
+    background = 'p:green'
+    background_templates = [
+      '{{ if or (.Working.Changed) (.Staging.Changed) }}p:yellow{{ else }}p:green{{ end }}',
+    ]
+    foreground = 'p:black'
+    template = """ \
+      {{ .HEAD }}\
+      {{ if or (.Working.Changed) (.Staging.Changed) }}?{{ end }} \
+      {{ if gt .Behind 0 }}⇣{{ .Behind }} {{ end }}\
+      {{ if gt .Ahead 0 }}⇡{{ .Ahead }} {{ end }}\
+      """
+
+    [blocks.segments.properties]
+      branch_icon = ''
+      commit_icon = '@'
+      fetch_status = true
+
+[[blocks]]
+  type = 'prompt'
+  alignment = 'right'
+
+  [[blocks.segments]]
+    type = 'python'
+    style = 'powerline'
+    leading_powerline_symbol = ''
+    powerline_symbol = ''
+    background = 'p:yellow'
+    foreground = 'p:black'
+    template = '{{ if .Venv }}   {{ .Venv }} {{ end }}'
+
+  [[blocks.segments]]
+    type = 'node'
+    style = 'powerline'
+    leading_powerline_symbol = ''
+    powerline_symbol = ''
+    background = 'p:red'
+    foreground = 'p:black'
+    template = '  {{ .Full }} '
+
+  [[blocks.segments]]
+    type = 'text'
+    style = 'powerline'
+    leading_powerline_symbol = ''
+    powerline_symbol = ''
+    background_templates = [
+      '{{ if gt .Code 0 }}p:red{{ end }}',
+      '{{ if eq .Code 0 }}p:black{{ end }}',
+    ]
+    foreground_templates = [
+      '{{ if gt .Code 0 }}p:yellow{{ end }}',
+      '{{ if eq .Code 0 }}p:green{{ end }}',
+    ]
+    template = """ \
+      {{ if gt .Code 0 }}{{ .Code }}  \
+      {{ else }} {{ end }}\
+    """
+
+[[blocks]]
+  type = 'prompt'
+  alignment = 'left'
+  newline = true
+
+  [[blocks.segments]]
+    type = 'text'
+    style = 'plain'
+    background = 'transparent'
+    foreground_templates = [
+      "{{if gt .Code 0}}p:red{{end}}",
+      "{{if eq .Code 0}}p:green{{end}}",
+    ]
+    template = '❯'
+
+# doesn't work in bash ;-;
+[secondary_prompt]
+  background = 'transparent'
+  foreground = 'white'
+  template = '⤷'
+
+# doesn't work in bash ;-;
+[transient_prompt]
+  foreground_templates = [
+    "{{if gt .Code 0}}p:red{{end}}",
+    "{{if eq .Code 0}}p:purple{{end}}",
+  ]
+  background = 'transparent'
+  template = '❯ '
+
+[palette]
+background = "#1E1E2E"
+foreground = "#CDD6F4"
+black = "#45475A"
+red = "#F38BA8"
+green = "#A6E3A1"
+yellow = "#F9E2AF"
+blue = "#89B4FA"
+purple = "#F5C2E7"
+cyan = "#94E2D5"
+white = "#BAC2DE"
+brightBlack = "#585B70"
+brightRed = "#F38BA8"
+brightGreen = "#A6E3A1"
+brightYellow = "#F9E2AF"
+brightBlue = "#89B4FA"
+brightPurple = "#F5C2E7"
+brightCyan = "#94E2D5"
+brightWhite = "#A6ADC8"
