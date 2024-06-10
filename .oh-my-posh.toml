@@ -59,9 +59,12 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
         style = 'powerline'
         leading_powerline_symbol = ''
         powerline_symbol = ''
-        background = 'p:yellow'
+        background = 'p:blue'
         foreground = 'p:black'
         template = '{{ if .Venv }}   {{ .Venv }} {{ end }}'
+
+        [blocks.segments.properties]
+            display_mode = 'files'
 
     [[blocks.segments]]
         type = 'node'
