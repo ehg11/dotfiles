@@ -88,3 +88,6 @@ eval $(thefuck --alias fuck)
 # easier path to windows home
 export WINHOME=/mnt/c/Users/hwang/
 export PATH="/mnt/c/Program Files/:$PATH"
+
+# neovim
+export PATH="$PATH:/home/hwang/.local/bin/nvim-linux64/bin"
